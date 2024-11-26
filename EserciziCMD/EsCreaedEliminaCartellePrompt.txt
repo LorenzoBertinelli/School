@@ -1,0 +1,23 @@
+Creo la directory "scuola":
+
+C:\>mkdir scuola
+
+Nella directory "scuola" creo le directory "elettronica", "informatica" e "mate":
+
+C:\>mkdir scuola\mate
+C:\>mkdir scuola\elettronica
+C:\>mkdir scuola\informatica
+
+Nella directory "informatica" creo le diretory "esercizi" e "materiale":
+
+C:\>mkdir scuola\informatica\esercizi
+C:\>mkdir scuola\informatica\materiale
+
+Nella directory "elettronica" creo le drectory "doc" e "mrelazioni":
+
+C:\>mkdir scuola\elettronica\doc
+C:\>mkdir scuola\elettronica\relazioni
+
+Elimino le directory "relazioni" e "scuola" con un solo comando:
+
+C:\>rmdir /s scuola

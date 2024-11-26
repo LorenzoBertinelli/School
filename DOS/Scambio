@@ -1,0 +1,20 @@
+;etichette     istruzioni\direttive      operandi      commenti           
+               DOSSEG                    ;segmenti organizzatisecondo Microsoft
+               .MODEL SMALL              ;segmento dati e segmento codice codice separati 64kb
+               .STACK  200H
+               .DATA                     ;direttiva per i dati
+var1           DB      4                 ;dichiaro una variabile di un byte
+var2           DB      3
+               .CODE 
+inizio:        
+               mov     ax,@data
+               mov     ds, ax
+
+               mov     al,var1           ;muovo nel registro al, il valore 4
+               mov     bl,var2
+               mov     vra2,al           ;muovo il contenuto del registro al nella variabile var2
+
+               ;fine programma
+               mov     4ch               ;funzione DOS di fine programma
+               int     21h
+               END     inizio

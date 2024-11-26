@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lorenzo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-28 08:11:48 "/>
+        <attribute name="created" value="TG9yZW56bztMQVBUT1AtRjBUOVBPS1A7MjAyMy0xMC0yNzsiMDc6NDE6MDkgIjszMDIw"/>
+        <attribute name="edited" value="TG9yZW56bztMQVBUT1AtRjBUOVBPS1A7MjAyMy0xMC0yODsiMDg6MTE6NDggIjs0OzMxMzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, km" type="Real" array="False" size=""/>
+            <declare name="cont" type="Integer" array="False" size=""/>
+            <assign variable="cont" expression="0"/>
+            <input variable="h"/>
+            <input variable="km"/>
+            <for variable="i" start="1" end="km" direction="inc" step="1">
+                <assign variable="h" expression="h/2"/>
+                <if expression="h&gt;=1">
+                    <then>
+                        <assign variable="cont" expression="cont+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;l'altezza finale &#232; di: &quot;" newline="False"/>
+            <output expression="h" newline="False"/>
+            <if expression="h&lt;1">
+                <then>
+                    <output expression="&quot;I km necessari per azzerare l altezza dell onda sono: &quot;" newline="False"/>
+                    <output expression="cont" newline="False"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,74 @@
+-Creo la directory "Pallavolo":
+
+C:\Users\Lorenzo>mkdir Pallavolo
+
+-Nella directory "Pallavolo" crelo le directoy "Prima_Serie", "Seconda_Serie" e "Terza_Serie":
+
+C:\Users\Lorenzo\Pallavolo>mkdir Prima_Serie
+
+C:\Users\Lorenzo\Pallavolo>mkdir Seconda_Serie
+
+C:\Users\Lorenzo\Pallavolo>mkdir Terza_Serie
+
+-Nella directory "Prima_Serie" creo i file "Novara.jpg", "Milano.doc" e "Vicenza.txt":
+
+C:\Users\Lorenzo\Pallavolo\Prima_Serie>type nul> Novara.jpg
+
+C:\Users\Lorenzo\Pallavolo\Prima_Serie>type nul> Milano.doc
+
+C:\Users\Lorenzo\Pallavolo\Prima_Serie>type nul> Vicenza.txt
+
+-Nella directory "Seconda_Serie" creo i file "Parma.jpg", "Napoli.doc" e "Roma.txt":
+
+
+C:\Users\Lorenzo\Pallavolo\Seconda_Serie>type nul> Napoli.doc
+
+C:\Users\Lorenzo\Pallavolo\Seconda_Serie>type nul> Parma.jpg
+
+C:\Users\Lorenzo\Pallavolo\Seconda_Serie>type nul> Roma.txt
+
+-Nella directory "Terza_Serie" creo i file "Udine.jpg", "Vercelli.txt" e "Verona.txt":
+
+C:\Users\Lorenzo\Pallavolo\Terza_Serie>type nul> Vercelli.txt
+
+C:\Users\Lorenzo\Pallavolo\Terza_Serie>type nul> Verona.txt
+
+C:\Users\Lorenzo\Pallavolo\Terza_Serie>type nul> Udine.jpg
+
+-Sposto, con percorso assoluto, Milano.doc in Seconda_Serie:
+
+C:\Users\Lorenzo\Pallavolo\Seconda_Serie> move C:\Users\Lorenzo\Pallavolo\Prima_Serie\Milano.doc C:\Users\Lorenzo\Pallavolo\Seconda_Serie
+
+-Sposto, con percorso assoluto, Roma.txt in Prima_Serie:
+
+C:\Users\Lorenzo\Pallavolo>move C:\Users\Lorenzo\Pallavolo\Seconda_Serie\Roma.txt C:\Users\Lorenzo\Pallavolo\Prima_Serie
+
+-Sposto, con percorso assoluto, Vercelli.txt in Seconda_Serie:
+
+C:\Users\Lorenzo\Pallavolo>move C:\Users\Lorenzo\Pallavolo\Terza_Serie\Vercelli.txt C:\Users\Lorenzo\Pallavolo\Seconda_Serie
+
+-Sposto, con percorso assoluto, Napoli.doc in Terza_Serie:
+
+C:\Users\Lorenzo\Pallavolo>move C:\Users\Lorenzo\Pallavolo\Seconda_Serie\Napoli.doc C:\Users\Lorenzo\Pallavolo\Terza_Serie
+
+-Sposto, con arattere Jolly(*) con percorso relativo, tutti i file.doc in Prima.Serie:
+
+C:\Users\Lorenzo\Pallavolo>move .\Prima_Serie\*.doc .\Prima_Serie
+C:\Users\Lorenzo\Pallavolo>move .\Terza_Serie\*.doc .\Prima_Serie
+
+-Sposto, con arattere Jolly(*) con percorso relativo, tutti i file.txt in Seconda.Serie:
+
+C:\Users\Lorenzo\Pallavolo>move .\Prima_Serie\*.txt .\Seconda_Serie
+C:\Users\Lorenzo\Pallavolo>move .\Terza_Serie\*.txt .\Seconda_Serie
+
+-uSposto, con arattere Jolly(*) con percorso relativo, tutti i file.jpg in Terza.Serie:
+
+C:\Users\Lorenzo\Pallavolo>move .\Prima_Serie\*.jpg .\Terza_Serie
+C:\Users\Lorenzo\Pallavolo>move .\Seconda_Serie\*.jpg .\Terza_Serie
+
+
+
+
+
+
+

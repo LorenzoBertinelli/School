@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)file:///C:/Users/Lorenzo/OneDrive/Desktop/Sito%20Spiegazione%20Diagrammi%20UML%20con%20Linguaggio%20Semplice.html -->
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAGRAMMI UML</title>
+    <link href="./DIAGRAMMI UML_files/css2" rel="stylesheet">
+    <link href="./DIAGRAMMI UML_files/all.min.css" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Verdana', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(to right, #f0f4c3, #c8e6c9); 
+            color: #333; 
+            line-height: 1.6; 
+            font-size: 1.1em; 
+        }
+        header {
+            background: #007BFF; 
+            color: #fff; 
+            padding: 20px 0; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 { 
+            margin: 0; 
+            font-size: 3em; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h2 { 
+            color: #007BFF; 
+            border-bottom: 4px solid #007BFF; 
+            padding-bottom: 10px; 
+            margin-top: 30px; 
+            font-size: 2.5em; 
+            text-align: center; 
+            background: rgba(0, 123, 255, 0.1); 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        h2:hover {
+            background: rgba(0, 123, 255, 0.2);
+        }
+        p { 
+            margin: 10px 0; 
+            padding: 0 20px; 
+            font-size: 1em; 
+            text-align: justify; 
+        }
+        .diagram { 
+            background: #ffffff; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+            padding: 30px; 
+            margin: 20px auto; 
+            max-width: 800px; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            border-left: 5px solid #007BFF; 
+            position: relative; 
+        }
+        .diagram:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+        footer { 
+            font-family: 'Dancing Script', cursive; 
+            text-align: center; 
+            margin-top: 40px; 
+            font-size: 1em; 
+            color: #fff; 
+            background: #343a40; 
+            padding: 15px; 
+            position: relative; 
+        }
+        .footer-content { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 10px; 
+        }
+        .social-icons a { 
+            color: #fff; 
+            margin: 0 10px; 
+            font-size: 1.5em; 
+            transition: color 0.3s; 
+        }
+        .social-icons a:hover { 
+            color: #007BFF; 
+        }
+        .footer-text { 
+            margin: 10px 0; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DIAGRAMMI UML</h1>
+    </header>
+    
+    <div class="diagram">
+        <h2>Casi d'Uso</h2>
+        <p>I casi d'uso mostrano come le persone (chiamate attori) interagiscono con un sistema. Rappresentano le funzioni che il sistema deve avere.</p>
+        <p>Ogni caso d'uso include:</p>
+        <ul>
+            <li><strong>Nome del caso d'uso:</strong> Un titolo che descrive la funzione di ciò che accade.</li>
+            <li><strong>Attori:</strong> Chi usa il sistema, ad esempio un cliente o un amministratore.</li>
+            <li><strong>Descrizione:</strong> Una breve spiegazione di cosa fa il caso d'uso.</li>
+            <li><strong>Precondizioni:</strong> Cosa deve essere vero prima di iniziare.</li>
+            <li><strong>Postcondizioni:</strong> Cosa deve essere vero dopo che è stato completato.</li>
+            <li><strong>Scenari:</strong> Diverse situazioni in cui il caso d'uso può essere eseguito.</li>
+        </ul>
+        <p>I casi d'uso aiutano a capire cosa deve fare il sistema e possono essere usati per testarlo.</p>
+    </div>
+    
+    <div class="diagram">
+        <h2>Diagramma delle Classi</h2>
+        <p>Il diagramma delle classi mostra le diverse parti di un sistema e come si collegano tra loro. Ogni parte è chiamata classe e rappresenta un'idea o un oggetto.</p>
+        <p>Gli elementi principali del diagramma delle classi includono:</p>
+        <ul>
+            <li><strong>Classi:</strong> Entità come "Utente" o "Prodotto".</li>
+            <li><strong>Attributi:</strong> Informazioni sulle classi, come "nome" o "prezzo".</li>
+            <li><strong>Metodi:</strong> Azioni che le classi possono eseguire, come "registrati()" o "acquista()".</li>
+            <li><strong>Relazioni:</strong> Come le classi sono collegate, ad esempio, un "Utente" può avere più "Ordini".</li>
+            <li><strong>Eredità:</strong> Quando una classe prende caratteristiche da un'altra, come un "Amministratore" che è un tipo di "Utente".</li>
+        </ul>
+        <p>Questi diagrammi aiutano a capire come è strutturato il sistema e a pianificare il lavoro di programmazione.</p>
+    </div>
+    
+    <div class="diagram">
+        <h2>Diagramma di Sequenza</h2>
+        <p>Il diagramma di sequenza mostra come gli oggetti nel sistema comunicano tra loro nel tempo, illustrando l'ordine delle azioni.</p>
+        <p>Caratteristiche principali del diagramma di sequenza includono:</p>
+        <ul>
+            <li><strong>Oggetti:</strong> Le parti che interagiscono, come "Cliente" e "Sistema".</li>
+            <li><strong>Messaggi:</strong> Le comunicazioni tra gli oggetti, come la "Richiesta di acquisto".</li>
+            <li><strong>Ordine:</strong> Mostra in quale ordine avvengono le interazioni.</li>
+            <li><strong>Attivazione:</strong> Indica quando un oggetto è attivo e sta lavorando su un'azione.</li>
+        </ul>
+        <p>Questo diagramma è utile per capire come funziona il sistema e per migliorare la progettazione.</p>
+    </div>
+    
+    <div class="diagram">
+        <h2>Diagramma delle Attività</h2>
+        <p>Il diagramma delle attività mostra il flusso di lavoro e le azioni che compongono un processo. Aiuta a visualizzare i passaggi necessari per completare un'attività.</p>
+        <p>Elementi chiave del diagramma delle attività includono:</p>
+        <ul>
+            <li><strong>Attività:</strong> Le azioni che devono essere eseguite, come "Compila modulo" o "Invia email".</li>
+            <li><strong>Decisioni:</strong> Punti in cui si deve scegliere tra diverse opzioni.</li>
+            <li><strong>Flussi:</strong> Mostrano la sequenza delle attività.</li>
+            <li><strong>Inizio e Fine:</strong> Indicano dove inizia e dove finisce il processo.</li>
+            <li><strong>Parallelismo:</strong> Mostra quando due o più attività possono avvenire contemporaneamente.</li>
+        </ul>
+        <p>Questi diagrammi aiutano a semplificare i processi e a migliorare l'efficienza.</p>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 2024 Diagrammi UML</p>
+                <p>Bertinelli Lorenzo, Godi Gianluca, Sara D'Angiolella e Edoardo Candita</p>
+            </div>
+            <div class="social-icons">
+                <a href="file:///C:/Users/Lorenzo/OneDrive/Desktop/Sito%20Spiegazione%20Diagrammi%20UML%20con%20Linguaggio%20Semplice.html#"><i class="fab fa-facebook-f"></i></a>
+                <a href="file:///C:/Users/Lorenzo/OneDrive/Desktop/Sito%20Spiegazione%20Diagrammi%20UML%20con%20Linguaggio%20Semplice.html#"><i class="fab fa-twitter"></i></a>
+                <a href="file:///C:/Users/Lorenzo/OneDrive/Desktop/Sito%20Spiegazione%20Diagrammi%20UML%20con%20Linguaggio%20Semplice.html#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="file:///C:/Users/Lorenzo/OneDrive/Desktop/Sito%20Spiegazione%20Diagrammi%20UML%20con%20Linguaggio%20Semplice.html#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body></html>
