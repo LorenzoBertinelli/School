@@ -1,3 +1,0 @@
-rossi 48 
-Frambati 89 
-Rossi 70 
