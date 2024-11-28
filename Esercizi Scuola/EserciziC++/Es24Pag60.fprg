@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lorenzo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-20 09:50:19 "/>
+        <attribute name="created" value="TG9yZW56bztMQVBUT1AtRjBUOVBPS1A7MjAyMy0xMC0yMDsiMDk6MDg6NDkgIjszMDIy"/>
+        <attribute name="edited" value="TG9yZW56bztMQVBUT1AtRjBUOVBPS1A7MjAyMy0xMC0yMDsiMDk6NTA6MTkgIjsyOzMxMjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, num1, num2" type="Integer" array="False" size=""/>
+            <declare name="crescente" type="Boolean" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="num2" expression="0"/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="crescente" expression="true"/>
+            <while expression="n&gt;0">
+                <input variable="num1"/>
+                <if expression="num1&gt;num2">
+                    <then/>
+                    <else>
+                        <assign variable="crescente" expression="false"/>
+                    </else>
+                </if>
+                <assign variable="n" expression="n-1"/>
+                <assign variable="num2" expression="num1"/>
+            </while>
+            <if expression="crescente==true">
+                <then>
+                    <output expression="&quot;l'ordine &#232; crescente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;l'ordine non &#232; crescente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
