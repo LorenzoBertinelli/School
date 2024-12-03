@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrammi di Attività 2024</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: #e0f7fa; /* Verde acqua */
+            color: #000000; /* Testo in nero */
+            line-height: 1.6;
+            animation: backgroundAnimation 10s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Altezza minima per occupare l'intera finestra */
+        }
+        @keyframes backgroundAnimation {
+            0% { background: #e0f7fa; }
+            100% { background: #b2ebf2; } /* Azzurro chiaro */
+        }
+        header {
+            background: rgba(0, 150, 136, 0.95); /* Azzurro scuro */
+            color: #fff; /* Titolo in bianco */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid #009688; /* Bordo inferiore */
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: white;
+            transition: transform 0.3s;
+            flex: 1; /* Permette alla tabella di occupare lo spazio disponibile */
+        }
+        table:hover {
+            transform: scale(1.02);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: rgba(0, 150, 136, 0.9); /* Azzurro scuro */
+            color: #fff; /* Testo delle intestazioni in bianco */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tr:hover {
+            background-color: rgba(0, 188, 212, 0.2); /* Colore di hover */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 150, 136, 0.95); /* Azzurro scuro */
+            color: #ffffff; /* Testo del footer in bianco */
+            width: 100%;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+        footer p {
+            color: #ffffff; /* Testo del footer in bianco */
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diagrammi di Attività 2024</h1>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Descrizione</th>
+                <th>Esempio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Attività</td>
+                <td>Un compito o un'azione che deve essere svolta.</td>
+                <td>"Scegliere un libro"</td>
+            </tr>
+            <tr>
+                <td>Inizio</td>
+                <td>Punto di partenza del diagramma, rappresentato da un cerchio pieno.</td>
+                <td>Cerchio che indica dove inizia il processo di acquisto.</td>
+            </tr>
+            <tr>
+                <td>Fine</td>
+                <td>Punto di conclusione del diagramma, rappresentato da un cerchio con un bordo spesso.</td>
+                <td>Cerchio con bordo spesso che indica quando il processo è finito.</td>
+            </tr>
+            <tr>
+                <td>Decisione</td>
+                <td>Punto in cui si deve prendere una decisione, mostrato come un rombo.</td>
+                <td>"Il pagamento è stato accettato?"</td>
+            </tr>
+            <tr>
+                <td>Flusso</td>
+                <td>Frecce che collegano le attività e mostrano la direzione del processo.</td>
+                <td>Freccia che va da "Scegliere un libro" a "Pagare".</td>
+            </tr>
+            <tr>
+                <td>Parallelo</td>
+                <td>Mostra attività che possono avvenire nello stesso momento, rappresentato con linee verticali.</td>
+                <td>"Inviare una conferma via email" e "Aggiornare il database" insieme.</td>
+            </tr>
+            <tr>
+                <td>Attività finale</td>
+                <td>Indica il completamento di un'attività, rappresentato da un cerchio con un bordo spesso.</td>
+                <td>Cerchio con bordo spesso che mostra che l'ordine è stato completato.</td>
+            </tr>
+            <tr>
+                <td>Nota</td>
+                <td>Commenti che forniscono ulteriori dettagli sul diagramma.</td>
+                <td>Nota che spiega un passaggio importante, come "Controllare che il pagamento sia andato a buon fine".</td>
+            </tr>
+            <tr>
+                <td>Ramo</td>
+                <td>Se ci sono più percorsi nel processo, si usano rami per rappresentarli.</td>
+                <td>Ramo che mostra cosa succede se il pagamento va bene o se ci sono problemi.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div><a href="DiagrammaAattivita.png"><p>Attività</p></a></div>
+    <footer>
+        <p>@ Diagrammi UML 2024 - Lorenzo Bertinelli, Gianluca Godi, Sara D'Angiolella e Edoardo Candita</p>
+    </footer>
+</body>
+</html>

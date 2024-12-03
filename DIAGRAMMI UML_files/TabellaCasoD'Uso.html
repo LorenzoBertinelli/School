@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella Caso d'uso Generico</title>
+    <style>
+        body { 
+            font-family: 'Verdana Pro', sans-serif; /* Carattere Verdana Pro */
+            margin: 0; 
+            background-color: #b2ebf2; /* Verde acqua */
+            color: #34495e; 
+            line-height: 1.6; 
+        }
+        .container {
+            max-width: 1200px; 
+            margin: auto; 
+            padding: 20px; 
+            background-color: #ffffff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+        }
+        h1 { 
+            color: #2980b9; 
+            text-align: center; 
+            padding: 20px; 
+            border-bottom: 3px solid #3498db; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            background-color: #fff; 
+        }
+        th, td { 
+            padding: 15px; 
+            text-align: left; 
+            transition: background-color 0.3s; 
+            border-bottom: 1px solid #ddd; 
+        }
+        th { 
+            background-color: #3498db; 
+            color: white; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+        }
+        tr:nth-child(even) { 
+            background-color: #f9f9f9; 
+        }
+        tr:hover { 
+            background-color: #d1ecf1; 
+        }
+        ul { 
+            margin-top: 20px; 
+            padding-left: 20px; 
+        }
+        li { 
+            margin-bottom: 10px; 
+            background: #e7f3fe; 
+            padding: 10px; 
+            border-left: 5px solid #3498db; 
+        }
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            font-size: 0.9em; 
+            color: #7f8c8d; 
+        }
+        @media (max-width: 768px) {
+            table, th, td { 
+                display: block; 
+                width: 100%; 
+            }
+            th, td { 
+                text-align: right; 
+            }
+            th { 
+                text-align: left; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tabella Caso d'uso Generico</h1>
+        <table>
+            <tr>
+                <th>Identificativo</th>
+                <td>UC-XXX</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>GG/MM/AA</td>
+            </tr>
+            <tr>
+                <th>Versione</th>
+                <td>0.00.000</td>
+            </tr>
+            <tr>
+                <th>Autore</th>
+                <td>Nome Autore</td>
+            </tr>
+            <tr>
+                <th>Descrizione</th>
+                <td>Descrizione generica del caso d'uso.</td>
+            </tr>
+            <tr>
+                <th>Attore Principale</th>
+                <td>Attore principale</td>
+            </tr>
+            <tr>
+                <th>Attori Secondari</th>
+                <td>Attori secondari</td>
+            </tr>
+            <tr>
+                <th>Entry Condition</th>
+                <td>Condizioni di ingresso generiche.</td>
+            </tr>
+            <tr>
+                <th>Exit Condition (On success)</th>
+                <td>Condizioni di uscita in caso di successo.</td>
+            </tr>
+            <tr>
+                <th>Exit Condition (On failure)</th>
+                <td>Condizioni di uscita in caso di errore.</td>
+            </tr>
+            <tr>
+                <th>Rilevanza/User Priority</th>
+                <td>Priorità generica.</td>
+            </tr>
+            <tr>
+                <th>Frequenza stimata</th>
+                <td>Frequenza stimata generica.</td>
+            </tr>
+            <tr>
+                <th>Extension point</th>
+                <td>Punto di estensione generico.</td>
+            </tr>
+            <tr>
+                <th>Generalization of</th>
+                <td>Generalizzazione generica.</td>
+            </tr>
+        </table>
+
+        <h2>Flusso di eventi principale</h2>
+        <table>
+            <tr>
+                <th>Passaggio</th>
+                <th>Descrizione</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Descrizione del primo passaggio.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Descrizione del secondo passaggio.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Descrizione del terzo passaggio.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Descrizione del quarto passaggio.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Descrizione del quinto passaggio.</td>
+            </tr>
+        </table>
+
+        <h2>Scenari alternativi</h2>
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Descrizione</th>
+            </tr>
+            <tr>
+                <td>Scenario Alternativo 1</td>
+                <td>Descrizione del primo scenario alternativo.</td>
+            </tr>
+            <tr>
+                <td>Scenario Alternativo 2</td>
+                <td>Descrizione del secondo scenario alternativo.</td>
+            </tr>
+        </table>
+
+        <h2>Flussi di eventi di errore</h2>
+        <table>
+            <tr>
+                <th>Flusso di errore</th>
+                <th>Descrizione</th>
+            </tr>
+            <tr>
+                <td>Flusso di errore 1</td>
+                <td>Descrizione del primo flusso di errore.</td>
+            </tr>
+            <tr>
+                <td>Flusso di errore 2</td>
+                <td>Descrizione del secondo flusso di errore.</td>
+            </tr>
+        </table>
+
+        <div><a href="Venditore.png"><p>Amazon</p></a></div>  
+
+        <footer>
+            &copy; 2024 - Lorenzo Bertinelli, Gianluca Godi, Sara D'Angiolella, Edoardo Candita.
+        </footer>
+    </div>
+</body>
+</html>

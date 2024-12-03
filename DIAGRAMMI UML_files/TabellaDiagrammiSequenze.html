@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informazioni UML</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+            color: #000; /* Testo in nero */
+            line-height: 1.6;
+        }
+        header {
+            background: #009688;
+            color: #fff; /* Testo in bianco */
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #00796b;
+            color: #fff; /* Testo in bianco */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        h2 {
+            text-align: center;
+            color: #00796b;
+            margin-top: 40px;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 1.2em;
+            color: #000; /* Testo in nero */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #00796b; /* Footer verde */
+            color: #ffffff; /* Testo in bianco */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+        .footer-text {
+            color: #ffffff; /* Testo in bianco */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informazioni sui Diagrammi UML</h1>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Descrizione</th>
+                <th>Esempio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="attori">
+                <td>Attori</td>
+                <td>Persone o sistemi esterni che interagiscono con il sistema. Gli attori possono essere utenti, sistemi esterni o altre entità che inviano richieste al sistema.</td>
+                <td>Un utente che effettua un acquisto su un sito di e-commerce.</td>
+            </tr>
+            <tr id="oggetti">
+                <td>Oggetti</td>
+                <td>Componenti del sistema che svolgono funzioni specifiche e interagiscono tra loro. Ogni oggetto ha uno stato e un comportamento definiti.</td>
+                <td>Un oggetto Cliente e un oggetto Ordine che collaborano per completare una transazione.</td>
+            </tr>
+            <tr id="messaggi">
+                <td>Messaggi</td>
+                <td>Comunicazioni tra oggetti, rappresentate da frecce nei diagrammi. I messaggi possono includere chiamate a metodi o notifiche di eventi.</td>
+                <td>Cliente -> Ordine: creaOrdine()</td>
+            </tr>
+            <tr id="lifelines">
+                <td>Lifelines</td>
+                <td>Linee verticali che rappresentano la vita di un oggetto nel tempo. Indicano quando un oggetto è attivo durante l'interazione.</td>
+                <td>Una linea verticale per l'oggetto Cliente che mostra la sua attività durante il processo di acquisto.</td>
+            </tr>
+            <tr id="attivazione">
+                <td>Attivazione</td>
+                <td>Periodo in cui un oggetto è attivo e sta eseguendo un'operazione. Viene mostrato come un rettangolo sopra la lifeline dell'oggetto.</td>
+                <td>Un rettangolo sopra la lifeline di Ordine mentre elabora il pagamento.</td>
+            </tr>
+            <tr id="nota">
+                <td>Nota</td>
+                <td>Commenti o annotazioni che forniscono ulteriori informazioni sul diagramma. Possono chiarire l'intento di un messaggio o una decisione.</td>
+                <td>Una nota che spiega un messaggio specifico nel diagramma.</td>
+            </tr>
+            <tr id="condizioni">
+                <td>Condizioni</td>
+                <td>Decisioni che influenzano il flusso del diagramma. Possono rappresentare ramificazioni nel processo basate su determinate condizioni.</td>
+                <td>Se l'ordine è valido, continua; altrimenti, mostra un messaggio di errore.</td>
+            </tr>
+            <tr id="loop">
+                <td>Loop</td>
+                <td>Indica che un messaggio viene inviato ripetutamente, di solito fino a quando non viene soddisfatta una condizione.</td>
+                <td>Inviare notifiche all'utente fino a quando non conferma la ricezione.</td>
+            </tr>
+            <tr id="parallelo">
+                <td>Parallelo</td>
+                <td>Mostra che due o più messaggi avvengono simultaneamente. Indica che le operazioni possono essere eseguite in parallelo senza dipendenze.</td>
+                <td>Inviare un'email e aggiornare il database nello stesso momento.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div><a href="DiagrammaSequenza.png"><p>Cliente</p></a></div>
+    <footer>
+        <p class="footer-text">@ Diagrammi UML 2024 - Lorenzo Bertinelli, Gianluca Godi, Sara D'Angiolella e Edoardo Candita</p>
+    </footer>
+</body>
+</html>

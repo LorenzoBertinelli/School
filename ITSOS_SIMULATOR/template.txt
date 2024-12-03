@@ -1,9 +1,0 @@
-    ofstream file("file.txt");
-
-    file<<"";
-
-    file.close();
-
-[creare e scrivere un testo]
-
-
