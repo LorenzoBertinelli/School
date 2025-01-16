@@ -1,0 +1,79 @@
+/* Reset di base */
+body, h2, h3, p, ul, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile del corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Stile dell'intestazione */
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stile dei titoli */
+h2, h3 {
+    color: #000000;
+}
+
+/* Stile dei paragrafi */
+p {
+    margin: 20px 0;
+}
+
+/* Stile delle liste */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.giocatori {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.giocatori li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.giocatori img {
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+}
+
+/* Stile della tabella */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #000000;
+    color: white;
+}
+
+/* Stile del footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
