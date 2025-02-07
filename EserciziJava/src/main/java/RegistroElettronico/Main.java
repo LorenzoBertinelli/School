@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Disciplina matematica = new Disciplina(10); // Massimo 10 valutazioni
+        System.out.print("Inserisci il nome del file in cui scrivere: ");
+        String nomeFile = scanner.nextLine();
+        Disciplina matematica = new Disciplina(10, nomeFile); // Massimo 10 valutazioni
 
         while (true) {
             System.out.println("Scegli un'operazione:");

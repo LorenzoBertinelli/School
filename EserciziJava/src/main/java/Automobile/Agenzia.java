@@ -1,6 +1,8 @@
 package Automobile;
 
-import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Agenzia {
     private String nome;
@@ -17,44 +19,79 @@ public class Agenzia {
 
     public void inserisciAuto(Auto auto) {
         if (numeroAuto < autoArray.length) {
-            autoArray[numeroAuto++] = auto;
+            autoArray[numeroAuto] = auto;
+            numeroAuto++;
         } else {
-            throw new IllegalArgumentException("Capacità massima dell'agenzia raggiunta.");
+            System.out.println("Capacità massima raggiunta. Non è possibile inserire altre auto.");
         }
     }
 
-    public void stampaAutoNoleggiate() {
-        int count = 0;
-        double totale = 0.0;
-        for (int i = 0; i < numeroAuto; i++) {
-            if (autoArray[i].isNoleggio()) {
-                count++;
-                totale += autoArray[i].calcolaCostoNoleggio();
+    public void salvaInCSV(String nomeFile) {
+        BufferedWriter writer = null;
+        try {
+            // Imposta il percorso completo per il file CSV
+            String percorsoCompleto = "C:\\Users\\Lorenzo\\OneDrive\\Desktop\\Documenti\\School\\EserciziJava\\src\\main\\java\\Automobile\\" + nomeFile;
+            writer = new BufferedWriter(new FileWriter(percorsoCompleto));
+
+            // Scrittura dell'intestazione
+            writer.write("Codice,Modello,Noleggiata,Numero di Noleggi,Costo Noleggio\n");
+            for (int i = 0; i < numeroAuto; i++) {
+                Auto auto = autoArray[i];
+                writer.write(auto.getCodice() + "," + auto.getModello() + "," +
+                             (auto.isNoleggiata() ? "V" : "F") + "," +
+                             auto.getNumeroNoleggi() + "," +
+                             auto.calcolaCostoNoleggio() + "\n");
+            }
+            System.out.println("Informazioni salvate in " + percorsoCompleto);
+        } catch (IOException e) {
+            System.out.println("Errore durante il salvataggio delle informazioni: " + e.getMessage());
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Errore durante la chiusura del writer: " + e.getMessage());
             }
         }
-        System.out.println("Numero di auto noleggiate: " + count + ", Importo totale: " + totale + " Euro");
+    }
+   
+
+    public void stampaAutoNoleggiate() {
+        System.out.println("Auto noleggiate:");
+        for (int i = 0; i < numeroAuto; i++) {
+            Auto auto = autoArray[i];
+            if (auto.isNoleggiata()) {
+                double costoNoleggio = auto.calcolaCostoNoleggio();
+                System.out.println("Codice: " + auto.getCodice() + ", Modello: " + auto.getModello() + ", Numero di Noleggi: " + auto.getNumeroNoleggi() +  ", Costo Noleggio: " + costoNoleggio + " Euro");
+            }
+        }
     }
 
     public void cercaAuto(String codice) {
-        for (int i = 0; i < numeroAuto; i++) {
-            if (autoArray[i].getCodice().equals(codice)) {
-                System.out.println(autoArray[i]);
-                return;
-            }
-        }
-        System.out.println("Auto con codice " + codice + " non trovata.");
-    }
-
-    public void stampaAutoNonNoleggiate() {
         boolean trovata = false;
         for (int i = 0; i < numeroAuto; i++) {
-            if (!autoArray[i].isNoleggio()) {
-                System.out.println(autoArray[i]);
+            Auto auto = autoArray[i];
+            if (auto.getCodice().equalsIgnoreCase(codice)) {
+                System.out.println("Auto trovata: Codice: " + auto.getCodice() + ", Modello: " + auto.getModello() +
+                                   ", Noleggiata: " + (auto.isNoleggiata() ? "V" : "F") +
+                                   ", Numero di Noleggi: " + auto.getNumeroNoleggi() +
+                                   ", Costo Noleggio: " + auto.calcolaCostoNoleggio() + " Euro");
                 trovata = true;
+                break;
             }
         }
         if (!trovata) {
-            System.out.println("Nessuna auto non noleggiata disponibile.");
+            System.out.println("Auto non trovata.");
+        }
+    }
+
+    public void stampaAutoNonNoleggiate() {
+        for (int i = 0; i < numeroAuto; i++) {
+            Auto auto = autoArray[i];
+            if (!auto.isNoleggiata()) {
+                System.out.println("Codice: " + auto.getCodice() + ", Modello: " + auto.getModello());
+            }
         }
     }
 }

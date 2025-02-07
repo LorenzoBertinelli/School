@@ -1,76 +1,47 @@
 package Automobile;
+
 public class Auto {
     private String codice;
-    private String marca;
-    private boolean noleggio;
-    private int giorni;
+    private String modello;
+    private boolean noleggiata;
+    private int numeroNoleggi;
 
-    private static double costoBase = 50.0;
-    private static double costoGiornoSupplementare = 35.0;
-
-    public Auto(String codice, String marca, boolean noleggio, int giorni) {
+    public Auto(String codice, String modello, boolean noleggiata, int numeroNoleggi) {
         this.codice = codice;
-        this.marca = marca;
-        setNoleggio(noleggio);
-        setGiorni(giorni);
+        this.modello = modello;
+        this.noleggiata = noleggiata;
+        this.numeroNoleggi = numeroNoleggi;
     }
 
     public String getCodice() {
         return codice;
     }
 
-    public void setCodice(String codice) {
-        this.codice = codice;
+    public String getModello() {
+        return modello;
     }
 
-    public String getMarca() {
-        return marca;
+    public boolean isNoleggiata() {
+        return noleggiata;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public boolean isNoleggio() {
-        return noleggio;
-    }
-
-    public void setNoleggio(boolean noleggio) {
-        this.noleggio = noleggio;
-    }
-
-    public int getGiorni() {
-        return giorni;
-    }
-
-    public void setGiorni(int giorni) {
-        if (giorni < 0 || giorni > 30) {
-            throw new IllegalArgumentException("I giorni devono essere compresi tra 0 e 30.");
-        }
-        this.giorni = giorni;
-    }
-
-    public static void setCostoBase(double costo) {
-        costoBase = costo;
-    }
-
-    public static void setCostoGiornoSupplementare(double costo) {
-        costoGiornoSupplementare = costo;
+    public int getNumeroNoleggi() {
+        return numeroNoleggi;
     }
 
     public double calcolaCostoNoleggio() {
-        if (!noleggio) {
-            return 0.0;
+        if (!noleggiata || numeroNoleggi <= 0) {
+            return 0;
         }
-        return costoBase + (giorni > 1 ? (giorni - 1) * costoGiornoSupplementare : 0);
-    }
+        
+        // Costo base
+        double costo = 50.0; // Costo per il primo giorno
 
-    @Override
-    public String toString() {
-        String info = "Codice: " + codice + ", Marca: " + marca + ", Noleggiata: " + (noleggio ? "Sì" : "No") + ", Giorni: " + giorni;
-        if (noleggio) {
-            info += ", Costo Noleggio: " + calcolaCostoNoleggio() + " Euro";
+        // Aggiungi 35 euro per ogni giorno successivo
+        if (numeroNoleggi > 1) {
+            costo += (numeroNoleggi - 1) * 35.0;
         }
-        return info;
+
+        return costo;
     }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeri Dispari</title>
+    <script>
+        var oddNumbers = []; // Array per i numeri dispari
+
+        // Ciclo per acquisire 10 valori numerici
+        for (var i = 0; i < 10; i++) {
+            var numero = parseInt(prompt("Inserisci il numero " + (i + 1) + ":")); // Richiesta di inserimento
+
+            // Aggiungi il numero all'array se è dispari
+            if (numero % 2 !== 0) {
+                oddNumbers.push(numero); // Aggiungi il numero dispari all'array
+            }
+        }
+
+        // Stampa i risultati nella pagina
+        document.write("<h2>Risultati:</h2>");
+        document.write("<p>I numeri dispari inseriti sono: " + oddNumbers.join(', ') + "</p>"); // Stampa i numeri dispari
+    </script>
+</head>
+<body>
+</body>
+</html>

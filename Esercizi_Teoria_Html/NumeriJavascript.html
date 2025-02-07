@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Somma e Numero Maggiore</title>
+    <script>
+        var somma = 0; // Inizializza la somma
+        var numeroMaggiore = 0; // Inizializza il numero maggiore a 0
+
+        // Ciclo per acquisire 10 valori numerici
+        for (var i = 0; i < 10; i++) {
+            var numero = parseInt(prompt("Inserisci il numero " + (i + 1) + ":")); // Richiesta di inserimento
+
+            somma += numero; // Aggiungi il numero alla somma
+
+            // Controlla se il numero è maggiore del numero maggiore attuale
+            if (numero > numeroMaggiore) {
+                numeroMaggiore = numero; // Aggiorna il numero maggiore
+            }
+        }
+
+        // Stampa i risultati nella pagina
+        document.write("<h2>Risultati:</h2>");
+        document.write("<p>La somma dei 10 valori è: " + somma + "</p>");
+        document.write("<p>Il numero maggiore è: " + numeroMaggiore + "</p>");
+    </script>
+</head>
+<body>
+</body>
+</html>

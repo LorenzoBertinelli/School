@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Calcolo Media e Somma</title> <!-- Titolo della pagina -->
+    <script>
+        function calcola() { // Definizione della funzione calcola
+            // Richiesta di inserimento dei numeri tramite prompt
+            let numero1 = parseFloat(prompt("Inserisci il numero 1:"));
+            let numero2 = parseFloat(prompt("Inserisci il numero 2:"));
+            let numero3 = parseFloat(prompt("Inserisci il numero 3:"));
+            let numero4 = parseFloat(prompt("Inserisci il numero 4:"));
+            let numero5 = parseFloat(prompt("Inserisci il numero 5:"));
+
+            // Creazione di un array con i numeri inseriti
+            let numeri = [numero1, numero2, numero3, numero4, numero5];
+
+            // Calcolo della somma e della media
+            let somma = numeri.reduce((acc, val) => acc + val, 0);
+            let media = somma / numeri.length;
+
+            // Mostra i risultati in un alert
+            alert(`La somma è: ${somma}\nLa media è: ${media}`);
+
+            // Scrive i risultati nella pagina
+            document.write(`<h2>Risultati:</h2>`);
+            document.write(`<p>La somma è: ${somma}</p>`);
+            document.write(`<p>La media è: ${media}</p>`);
+
+            // Opzionale: mostra i risultati nella console
+            console.log(`La somma è: ${somma}`);
+            console.log(`La media è: ${media}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcolo Media e Somma</h1> <!-- Titolo principale della pagina -->
+    <button onclick="calcola()">Calcola</button> <!-- Pulsante che attiva la funzione calcola al clic -->
+</body>
+</html>
