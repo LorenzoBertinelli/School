@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram name="Pagina-1" id="jzLJZ3DwqR3dHBaUQYXw">
+    <mxGraphModel dx="521" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-1" target="k0qQtv79GcPc6wuTk6-r-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-1" value="utente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-2" target="k0qQtv79GcPc6wuTk6-r-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-2" value="scelta del film" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="185" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-4" target="k0qQtv79GcPc6wuTk6-r-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-4" value="selezionare&amp;nbsp;&lt;br&gt;data e ora" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="185" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-6" target="k0qQtv79GcPc6wuTk6-r-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-6" value="selezonar eposto" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="185" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-8" target="k0qQtv79GcPc6wuTk6-r-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-8" target="k0qQtv79GcPc6wuTk6-r-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-8" value="pnisponibilità posti" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="162.5" y="550" width="165" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k0qQtv79GcPc6wuTk6-r-10" target="k0qQtv79GcPc6wuTk6-r-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-10" value="pagamento" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="20" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-12" value="conferma dell aprenotazione" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="20" y="860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k0qQtv79GcPc6wuTk6-r-14" value="errore&amp;nbsp;&lt;br&gt;posti non disponibili" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="340" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

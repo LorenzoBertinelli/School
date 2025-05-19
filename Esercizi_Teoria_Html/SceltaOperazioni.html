@@ -1,0 +1,66 @@
+<html lang="it">
+<head>
+    <title>Operazioni Matematiche</title>
+    <script>
+        // Funzione che gestisce la scelta dell'operazione
+        function scegliOperazione(operazione) {
+            // Chiede all'utente quanti numeri vuole operare
+            var quantita = prompt("Quanti numeri vuoi operare?");
+            // Controlla se l'input è valido
+            if (quantita === null || isNaN(quantita) || quantita <= 0) {
+                alert("Per favore, inserisci un numero valido.");
+                return;
+            }
+
+            var numeri = [];
+            // Ciclo per raccogliere i numeri dall'utente
+            for (var i = 0; i < quantita; i++) {
+                var numero = prompt("Inserisci il numero " + (i + 1) + ":");
+                // Controlla se l'input è valido
+                if (numero === null || isNaN(numero)) {
+                    alert("Per favore, inserisci un numero valido.");
+                    return; 
+                }
+                // Aggiunge il numero all'array dopo averlo convertito in float
+                numeri.push(parseFloat(numero));
+            }
+
+            var risultato; // Variabile per memorizzare il risultato dell'operazione
+            // Switch per determinare l'operazione da eseguire
+            switch (operazione) {
+                case 'addizione':
+                    // Calcola la somma dei numeri
+                    risultato = numeri.reduce((a, b) => a + b, 0);
+                    break;
+                case 'sottrazione':
+                    // Calcola la sottrazione dei numeri
+                    risultato = numeri.reduce((a, b) => a - b);
+                    break;
+                case 'moltiplicazione':
+                    // Calcola il prodotto dei numeri
+                    risultato = numeri.reduce((a, b) => a * b, 1);
+                    break;
+                case 'divisione':
+                    // Calcola la divisione dei numeri
+                    risultato = numeri.reduce((a, b) => a / b);
+                    break;
+                default:
+                    // Messaggio di errore se l'operazione non è valida
+                    alert("Operazione non valida.");
+                    return; // Esce dalla funzione
+            }
+
+            // Stampa il risultato dell'operazione nella pagina
+            document.write("Il risultato dell'" + operaz0ione + " è: " + risultato);
+        }
+    </script>
+</head>
+<body>
+    <h1>Seleziona un'operazione</h1>
+    <!-- Bottoni per selezionare l'operazione -->
+    <button onclick="scegliOperazione('addizione')">Addizione</button>
+    <button onclick="scegliOperazione('sottrazione')">Sottrazione</button>
+    <button onclick="scegliOperazione('moltiplicazione')">Moltiplicazione</button>
+    <button onclick="scegliOperazione('divisione')">Divisione</button>
+</body>
+</html>

@@ -1,12 +1,14 @@
 package AgenziaCollocamento;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Agenzia agenzia = new Agenzia(10); // Inizializza l'agenzia con un array di corsi di dimensione 10
+
+        // Carica i corsi dal file all'avvio
+        agenzia.caricaCorsiDaFile();
 
         int scelta;
         do {
@@ -25,23 +27,11 @@ public class Main {
 
             switch (scelta) {
                 case 1:
-                    System.out.print("Inserisci il nome del file da cui visualizzare i corsi (es. corsi.csv): ");
-                    String nomeFileVisualizzazione = scanner.nextLine();
-                    try {
-                        agenzia.visualizzaCorsiDaFile(nomeFileVisualizzazione);
-                    } catch (IOException e) {
-                        System.err.println("Errore nella lettura del file: " + e.getMessage());
-                    }
+                    agenzia.visualizzaCorsiDaFile(); // Non serve passare il nome del file
                     break;
                 case 2:
-                    System.out.print("Inserisci il percorso completo del file (es. corsi_scaricati.csv): ");
-                    String nomeFileSalvataggio = scanner.nextLine();
-                    try {
-                        agenzia.salvaCorsiInFile(nomeFileSalvataggio);
-                        System.out.println("Corsi salvati in " + nomeFileSalvataggio);
-                    } catch (Exception e) {
-                        System.err.println("Errore nel salvataggio: " + e.getMessage());
-                    }
+                    agenzia.salvaCorsiInFile(); // Anche qui non serve passare il nome del file
+                    System.out.println("Corsi salvati in " + Agenzia.NOME_FILE); // Informazione sul salvataggio
                     break;
                 case 3:
                     agenzia.visualizzaCorsiConPostiLiberi();
@@ -73,10 +63,7 @@ public class Main {
                     int numeroMassimoIscritti = scanner.nextInt();
                     scanner.nextLine(); // Consuma il newline
 
-                    System.out.print("Inserisci il percorso completo del file in cui salvare il corso (es. corsi.csv): ");
-                    String nomeFileSalvataggioCorso = scanner.nextLine();
-
-                    agenzia.creaCorso(codiceCorso, nomeCorso, cognomeDocente, numeroOre, numeroMassimoIscritti, nomeFileSalvataggioCorso);
+                    agenzia.creaCorso(codiceCorso, nomeCorso, cognomeDocente, numeroOre, numeroMassimoIscritti);
                     break;
                 case 0:
                     System.out.println("Uscita dal programma.");

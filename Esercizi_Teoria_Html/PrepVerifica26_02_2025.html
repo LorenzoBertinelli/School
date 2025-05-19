@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Form</title>.
+    
+    <script>
+        function controllaCampi() {
+            // Recupero dei valori dai campi di input
+            var nome = document.getElementById('nome').value; // Ottiene il valore del campo 'nome'
+            var cognome = document.getElementById('cognome').value; // Ottiene il valore del campo 'cognome'
+            var luogoDiNascita = document.getElementById('luogoDiNascita').value; // Ottiene il valore del campo 'luogoDiNascita'
+            var informazioniPersonali = document.getElementById('informazioniPersonali').value; // Ottiene il valore del campo 'informazioniPersonali'
+m 
+            // Controllo se i campi obbligatori sono compilati
+            if (nome === "" || cognome === "" || luogoDiNascita === "") {
+                alert("Per favore, compila tutti i campi obbligatori: Nome, Cognome, Luogo di nascita.");
+                return;
+            }
+
+            // Stampa delle informazioni
+            var messaggio = "Nome: " + nome + "\n" + 
+                            "Cognome: " + cognome + "\n" + 
+                            "Luogo di nascita: " + luogoDiNascita;
+
+            // Controllo se ci sono informazioni personali da aggiungere
+            if (informazioniPersonali !== "") {
+                // Se il campo informazioni personali non è vuoto, aggiunge queste informazioni al messaggio
+                messaggio += "\nInformazioni Personali: " + informazioniPersonali;
+            }
+
+            // Mostra un avviso con tutte le informazioni raccolte
+            alert(messaggio);
+        }
+    </script>
+</head>
+<body>
+    <h1>Form con Nome, Cognome e Luogo di Nascita</h1>
+    <form>
+        Nome: <input type="text" id="nome"> <span style="color: red;">*</span><br><br>
+        Cognome: <input type="text" id="cognome"> <span style="color: red;">*</span><br><br>
+        Luogo di nascita: <input type="text" id="luogoDiNascita"> <span style="color: red;">*</span><br><br>
+        Informazioni personali: <textarea id="informazioniPersonali"></textarea><br><br>
+        <input type="button" value="Controlla campi" onclick="controllaCampi()"> <!-- Pulsante per attivare la funzione di controllo -->
+    </form>
+</body>
+</html>
